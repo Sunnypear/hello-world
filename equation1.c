@@ -1,3 +1,40 @@
-//æ±‚è§£ä¸€å…ƒäºŒæ¬¡æ–¹ç¨‹çš„æ ¹
-//æŸ¥é˜…sqrt()å‡½æ•°
-//æ³¨æ„æœ‰æ²¡æœ‰è§£
+//Çó½âÒ»Ôª¶ş´Î·½³ÌµÄ¸ù
+//²éÔÄsqrt()º¯Êı
+//×¢ÒâÓĞÃ»ÓĞ½â
+#include<stdio.h>
+#include<math.h>
+   void Realroot(double a,double b,double c);    /*º¯ÊıÉùÃ÷*/ 
+   int main(void)
+{ 
+  double a,b,c;                       /*a,b,c·Ö±ğÎªxµÄ¶ş´ÎÏî£¬Ò»´ÎÏî£¬³£ÊıÏî*/
+  printf("ÇëÊäÈëxµÄ¶ş´ÎÏîÏµÊıa=");    /*ÌáÊ¾ÊäÈë¶ş´ÎÏîÏµÊıa*/ 
+  scanf("%lf",&a);                    /*´Ó¼üÅÌ½ÓÊÜÒ»¸öÊµÊı´æÈëa*/  
+  printf("ÇëÊäÈëxµÄÒ»´ÎÏîÏµÊıb=");/*ÌáÊ¾ÊäÈëÒ»´ÎÏîÏµÊıb*/
+  scanf("%lf",&b);/*´Ó¼üÅÌ½ÓÊÜÒ»¸öÊµÊı´æÈëb*/ 
+  printf("ÇëÊäÈë³£ÊıÏîc=");/*ÌáÊ¾ÊäÈë³£Êıc*/
+  scanf("%lf",&c);/*´Ó¼üÅÌ½ÓÊÜÒ»¸öÊµÊı´æÈëc*/ 
+  Realroot(a,b,c);/*µ÷ÓÃRealrootº¯Êı*/ 
+  return 0;
+}
+   void Realroot(double a,double b,double c)
+{
+  double x1,x2;
+  if (b*b-4*a*c<0)/*ÅĞ¶ÏdeltaÊÇ·ñĞ¡ÓÚ0*/ 
+  {
+  printf("´Ë·½³ÌÎŞÊµÊı¸ù£¡\n");/*ÈôdeltaĞ¡ÓÚ0£¬Êä³ö·½³ÌÎŞÊµ¸ù*/ 
+  }
+  else
+    {
+  if (b*b-4*a*c==0) /*ÅĞ¶ÏdeltaÊÇ·ñµÈÓÚ0*/ 
+       {
+   x1 = x2 = -b/(2*a);/*ÈôdeltaµÈÓÚ0£¬x1=x2*/ 
+  printf("x1=x2=%lf",x1);	
+       }
+  else
+         {
+  x1 = (-b+sqrt(b*b-4*a*c))/2*a;/*Èôdelta>=0,x1=*/
+  x2 = (-b-sqrt(b*b-4*a*c))/2*a;/*Èôdelta>=0,x2=*/ 
+  printf("x1=%lf,x2=%lf",x1,x2);
+         }
+     }    
+}
