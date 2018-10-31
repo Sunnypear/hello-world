@@ -22,8 +22,8 @@
      scanf("%lf",&f);              /*从键盘接受一个实数存入f*/
      if (b*d-a*e != 0)             /*判断两方程是否成比例*/ 
       {
-	  y = (c*d-a*f)/(b*d-a*e);     /*求x的值 
-      x = (b*f-c*e)/(d*b-a*e);       求y的值*/ 
+	  y = (c*d-a*f)/(b*d-a*e);     /*求x的值 ，求y的值*/ 
+      x = (b*f-c*e)/(d*b-a*e);        
      printf("x=%lf  y=%lf",x,y);   /*输出x,y*/ 
       }
 	 else   
